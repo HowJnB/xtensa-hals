@@ -1,0 +1,16 @@
+# autoreconf
+/aclocal.m4
+/autom4te.cache/
+/build-aux/
+
+# configure
+.deps/
+config.h
+config.log
+config.status
+
+# make all
+*.o
+*.S
+*-split.mk
+*--*.c

@@ -1,0 +1,15 @@
+#
+# Copyright (c) 2019 Howard JB
+#
+# See the LICENSE file.
+#
+
+SUBDIRS := lib include
+
+.SILENT:
+.PHONY : recurse
+.PHONY : install
+install: recurse
+recurse: $(foreach P, $(SUBDIRS), $(P).smake)
+%.smake:
+	cd $* && $(MAKE) $(MAKECMDGOALS)

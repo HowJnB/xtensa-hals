@@ -1,0 +1,16 @@
+#
+# Copyright (c) 2019 Howard JB
+#
+# See the LICENSE file.
+#
+
+SRCDIR  := @srcdir@
+PREFIX  := @prefix@
+
+.SILENT:
+.PHONY : dobuild
+.PHONY : install
+dobuild:
+install:
+	mkdir -p $(DESTDIR)$(PREFIX)/lib
+	cp $(SRCDIR)/*.a $(DESTDIR)$(PREFIX)/lib/.
